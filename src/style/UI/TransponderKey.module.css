@@ -1,0 +1,40 @@
+.container {
+  position: relative;
+  color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.keyIcon {
+  font-size: 35px;
+}
+.castIcon {
+  position: absolute;
+  left: -7px;
+  bottom: -7px;
+  transform: rotate(-140deg);
+  font-size: 30px;
+}
+
+@media (max-width: 650px) {
+  .keyIcon {
+    font-size: 30px;
+  }
+  .castIcon {
+    left: -5px;
+    bottom: -5px;
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 450px) {
+  .keyIcon {
+    font-size: 25px;
+  }
+  .castIcon {
+    left: -3px;
+    bottom: -3px;
+    font-size: 20px;
+  }
+}

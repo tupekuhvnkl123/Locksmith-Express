@@ -1,0 +1,32 @@
+.backDrop {
+  position: absolute;
+  height: 100dvh;
+  width: 100vw;
+  background-color: black;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+}
+
+.linkButton {
+  width: 100%;
+  padding: 30px 80px 30px 40px !important;
+}
+
+.link {
+  font-size: 19px;
+  width: 100%;
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+@media (max-width: 550px) {
+  .linkButton {
+    padding: 30px 60px 30px 30px !important;
+  }
+}
+
+/* .selectedLink {
+  color: var(--secondary-color);
+} */

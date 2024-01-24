@@ -1,0 +1,23 @@
+.iconTextItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--background-color);
+}
+.icon {
+  margin-right: 15px;
+  font-size: 20px;
+}
+.text {
+  font-weight: 200;
+  font-size: 18px;
+}
+
+@media (max-width: 1200px) {
+  .icon {
+    font-size: 18px;
+  }
+  .text {
+    font-size: 15px;
+  }
+}

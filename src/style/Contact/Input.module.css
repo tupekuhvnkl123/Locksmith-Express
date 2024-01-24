@@ -1,0 +1,32 @@
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.inputContainer label {
+  color: var(--primary-color);
+  font-weight: 300;
+}
+.inputContainer input,
+.inputContainer textarea {
+  background-color: transparent;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  height: 45px;
+  width: 100% !important;
+  resize: none;
+}
+
+@media (max-width: 550px) {
+  .inputContainer label {
+    font-size: 14px;
+  }
+  .inputContainer input,
+  .inputContainer textarea {
+    height: 35px;
+  }
+  .inputContainer textarea {
+    height: 100px !important;
+  }
+}

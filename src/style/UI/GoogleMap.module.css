@@ -1,0 +1,15 @@
+.mapContainer {
+  width: 100%;
+  height: 60dvh;
+}
+
+.locationMark {
+  font-size: 30px;
+  color: red;
+}
+
+@media (max-width: 750px) {
+  .mapContainer {
+    height: 40dvh;
+  }
+}
