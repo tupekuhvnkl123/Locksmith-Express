@@ -11,6 +11,7 @@
   transition: transform 0.3s ease;
   padding: 0 50px;
   background-color: var(--primary-color);
+  min-height: 100px;
 }
 .logoContainer {
 }
@@ -37,24 +38,6 @@
 .hamburgerContainer {
   display: none;
 }
-/* .scrolledNavbar {
-  padding: 10px 40px 10px 0px;
-  background-color: rgba(0, 0, 0, 0.1);
-} */
-
-/* 
-
-.scrolledlink {
-  color: black;
-}
-
-.selectedLink {
-  color: var(--secondary-color);
-}
-
-
-
-*/
 
 @media (max-width: 750px) {
   .linksContainer {
