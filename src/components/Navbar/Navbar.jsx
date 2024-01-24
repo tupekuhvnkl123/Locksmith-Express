@@ -14,6 +14,8 @@ function Navbar() {
     </a>
   ));
 
+  //! add scrolling effect/ when scrolling down make the navbar fade away/ when scrolling up the opposite
+
   return (
     <div className={`${classes.navbar}`}>
       <div className={classes.logoContainer}>
