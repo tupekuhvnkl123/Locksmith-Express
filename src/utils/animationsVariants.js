@@ -8,6 +8,6 @@ export const serviceItemAnimation = {
 export const contactAnimation = {
   initial: { opacity: 0 },
   whileInView: { opacity: 1 },
-  transition: { duration: 1.5, ease: "easeInOut" },
+  transition: { duration: 1.5, ease: "easeInOut", delay: 0.3 },
   viewport: { once: true },
 };

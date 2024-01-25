@@ -30,11 +30,21 @@
   outline: 1px solid var(--secondary-color);
 }
 
+.errorMsg {
+  color: red;
+  font-size: 14px;
+  font-weight: 300;
+  bottom: -20px;
+}
+
 @media (max-width: 550px) {
   .inputContainer label {
     font-size: 14px;
   }
   .inputContainer input {
     height: 35px;
+  }
+  .errorMsg {
+    font-size: 11px;
   }
 }

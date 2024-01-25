@@ -1,11 +1,12 @@
 import classes from "../../style/Contact/Input.module.css";
 
-const Input = ({ name, type, label, className, onChange, textarea }) => {
+const Input = ({ name, type, label, className, textarea, register, error }) => {
   if (textarea) {
     return (
       <div className={`${classes.inputContainer} ${className}`}>
         <label htmlFor={name}>{label}</label>
-        <textarea onChange={onChange} name={name} />
+        <textarea {...register(name)} name={name} />
+        {error && <p className={classes.errorMsg}>{error}</p>}
       </div>
     );
   }
@@ -13,7 +14,8 @@ const Input = ({ name, type, label, className, onChange, textarea }) => {
   return (
     <div className={`${classes.inputContainer} ${className}`}>
       <label htmlFor={name}>{label}</label>
-      <input onChange={onChange} type={type} name={name} />
+      <input {...register(name)} type={type} name={name} />
+      {error && <p className={classes.errorMsg}>{error}</p>}
     </div>
   );
 };

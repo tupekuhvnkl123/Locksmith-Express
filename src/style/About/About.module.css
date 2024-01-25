@@ -1,5 +1,4 @@
 .background {
-  height: 70dvh;
   background-image: url("../../assets/BackgroundImage2.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -7,14 +6,32 @@
 }
 
 .container {
-  height: 100%;
+  min-height: 600px;
   width: 100%;
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: space-between;
   background-color: var(--primary-color);
   opacity: 0.85;
-  padding: 0 150px;
+  padding: 80px 100px 80px 150px;
+}
+.logoAndContent {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.featureItemsContainer {
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 50px;
+  row-gap: 10px;
+  align-items: center;
+  justify-content: start;
+  width: 80%;
 }
 
 .logoImage {
@@ -23,44 +40,48 @@
 }
 
 .contentContainer {
-  width: 40vw;
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
-.title {
-  margin-bottom: 50px;
-  font-size: 37px;
+.contentContainer .title {
+  font-size: 35px;
   font-weight: 500;
+  margin-bottom: 30px;
 }
+
 .aboutContent {
   color: var(--background-color);
-  width: 80%;
+  width: 100%;
 }
 
 @media (max-width: 1300px) {
   .container {
-    padding: 0 70px;
+    padding: 70px;
   }
 
-  .contentContainer {
-    width: 100%;
-  }
-  .title {
-    margin-bottom: 40px;
+  .contentContainer .title {
+    margin-bottom: 30px;
     font-size: 30px;
   }
   .aboutContent {
     font-size: 14px;
   }
 }
-@media (max-width: 1000px) {
-  .container {
-    padding-right: 0px;
+@media (max-width: 1115px) {
+  .featureItemsContainer {
+    grid-template-columns: repeat(2, 1fr);
   }
-  .title {
+}
+
+@media (max-width: 1000px) {
+  .contentContainer {
+    width: 55%;
+  }
+  .contentContainer .title {
     font-size: 25px;
   }
   .aboutContent {
@@ -70,22 +91,35 @@
 
 @media (max-width: 750px) {
   .container {
+    padding: 30px;
+  }
+  .contentContainer {
+    width: 80%;
+  }
+  .logoAndContent {
     flex-direction: column;
     justify-content: center;
-    padding: 0;
   }
   .logoImage {
     margin-bottom: 40px;
     width: 40%;
   }
-  .title {
+  .contentContainer .title {
     margin-bottom: 20px;
   }
 }
-
+@media (max-width: 695px) {
+  .featureItemsContainer {
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 50px;
+  }
+}
 @media (max-width: 500px) {
-  .title {
-    font-size: 23px;
+  .contentContainer {
+    width: 95%;
+  }
+  .contentContainer .title {
+    font-size: 19px;
   }
   .aboutContent {
     font-size: 12px;
