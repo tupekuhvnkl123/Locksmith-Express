@@ -8,12 +8,13 @@ const Service = ({ id }) => {
     <div className={classes.container} id={id}>
       <Title text="Our Services" dark />
       <div className={classes.serviceItemsContainer}>
-        {servicesItems.map((item) => (
+        {servicesItems.map((item, index) => (
           <ServiceItem
             key={item.title}
             Icon={item.icon}
             title={item.title}
             content={item.content}
+            index={index}
           />
         ))}
       </div>

@@ -16,6 +16,16 @@
   color: white;
   font-size: 22px;
 }
+.phoneItem {
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+.phoneItem:hover {
+  transform: scale(1.05);
+}
+.phoneItem:hover p {
+  font-weight: 400;
+}
 
 @media (max-width: 1200px) {
   .footer {

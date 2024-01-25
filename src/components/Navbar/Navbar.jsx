@@ -4,9 +4,11 @@ import LinksMenu from "./LinksMenu.jsx";
 import { navLinks } from "../../utils/consts.js";
 import classes from "../../style/Navbar/Navbar.module.css";
 import logo from "../../assets/Logo.png";
+import useScrollDirection from "../../hooks/useScrollDirection.js";
 
 function Navbar() {
   const [openMenu, setOpenMenu] = useState(false);
+  const { scrolledDown } = useScrollDirection();
 
   const displayLinks = navLinks.map((link) => (
     <a href={`#${link}`} className={classes.link} key={link}>
@@ -14,10 +16,12 @@ function Navbar() {
     </a>
   ));
 
-  //! add scrolling effect/ when scrolling down make the navbar fade away/ when scrolling up the opposite
-
   return (
-    <div className={`${classes.navbar}`}>
+    <div
+      className={`${classes.navbar} ${
+        scrolledDown ? classes.scrolledNavBar : ""
+      }`}
+    >
       <div className={classes.logoContainer}>
         <img className={classes.logo} src={logo} />
       </div>

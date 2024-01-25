@@ -1,4 +1,4 @@
-import { footerContent } from "../../utils/consts";
+import { footerContent, homeContent } from "../../utils/consts";
 import IconTextItem from "./IconTextItem";
 import classes from "../../style/Footer/Footer.module.css";
 
@@ -8,6 +8,11 @@ import { IoLocationSharp } from "react-icons/io5";
 import { PiCertificateFill } from "react-icons/pi";
 
 const Footer = () => {
+  const openPhoneApp = () => {
+    const phoneUrl = `tel:${homeContent.phoneNumber}`;
+    window.location.href = phoneUrl;
+  };
+
   return (
     <footer className={classes.footer}>
       <div className={classes.itemsContainer}>
@@ -15,7 +20,12 @@ const Footer = () => {
         <IconTextItem text={footerContent.address} Icon={IoLocationSharp} />
       </div>
       <div className={classes.itemsContainer}>
-        <IconTextItem text={footerContent.number} Icon={FaPhone} />
+        <IconTextItem
+          onClick={openPhoneApp}
+          text={footerContent.number}
+          Icon={FaPhone}
+          className={classes.phoneItem}
+        />
         <IconTextItem
           text={footerContent.licenseNumber}
           Icon={PiCertificateFill}

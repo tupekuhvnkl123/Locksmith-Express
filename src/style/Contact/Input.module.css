@@ -16,17 +16,25 @@
   height: 45px;
   width: 100% !important;
   resize: none;
+  padding-left: 10px;
+}
+
+.inputContainer textarea {
+  padding-top: 10px;
+  height: 100px;
+}
+
+.inputContainer input:focus,
+.inputContainer textarea:focus {
+  border: none;
+  outline: 1px solid var(--secondary-color);
 }
 
 @media (max-width: 550px) {
   .inputContainer label {
     font-size: 14px;
   }
-  .inputContainer input,
-  .inputContainer textarea {
+  .inputContainer input {
     height: 35px;
-  }
-  .inputContainer textarea {
-    height: 100px !important;
   }
 }
